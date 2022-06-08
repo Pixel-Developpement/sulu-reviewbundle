@@ -1,0 +1,18 @@
+{
+  "review": "Avis",
+  "review.name": "Nom du client",
+  "review.date": "Date de l'avis",
+  "review.rating": "Note sur 5",
+  "review.message": "Message",
+  "review.platform": "Platforme (Google My Business, Tripadvisor, ...)",
+  "review.category": "Catégorie",
+  "review.clientImage": "Image du client",
+  "review.isActive": "Activer ?",
+  "review.reviewList": "Liste des avis",
+  "review.emptyReview": "Sélectionner un avis",
+  "sulu_activity.resource.reviews": "Avis",
+  "sulu_activity.description.reviews.created": "{userFullName} a créé l'avis \"{resourceTitle}\"",
+  "sulu_activity.description.reviews.modified": "{userFullName} a modifié l'avis \"{resourceTitle}\"",
+  "sulu_activity.description.reviews.removed": "{userFullName} a supprimé l'avis \"{resourceTitle}\"",
+  "sulu_activity.description.reviews.restored": "{userFullName} a restauré l'avis \"{resourceTitle}\""
+}

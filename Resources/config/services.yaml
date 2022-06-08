@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Pixel\ReviewBundle\Twig\ReviewExtension:
+    public: true
+    autowire: true
+    tags:
+      - {name: twig.extension}
