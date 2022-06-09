@@ -44,12 +44,17 @@ class ReviewRepository extends EntityRepository implements DataProviderRepositor
         return $review;
     }
 
-    public function getLatestReviews(int $limit)
+    public function getLatestReviews(int $limit, string $locale)
     {
         $query = $this->createQueryBuilder("r")
+            ->select('r.name', 'r.rating', 'r.date', 'clientImage.id AS client_image_id', 't.message')
+            ->leftJoin("r.translations", "t")
+            ->leftJoin("r.clientImage", "clientImage")
             ->where("r.isActive = 1")
+            ->andWhere("t.locale = :locale")
             ->orderBy("r.date", "desc")
-            ->setMaxResults($limit);
+            ->setMaxResults($limit)
+            ->setParameter("locale", $locale);
         return $query->getQuery()->getResult();
     }
 
